@@ -1,0 +1,40 @@
+{
+  "name": "node-plugin-require-context",
+  "version": "1.0.0",
+  "description": "nodejs plugin like webpack require-context.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/condorheroblog/node-plugin-require-context.git"
+  },
+  "keywords": [
+    "require-context",
+    "nodejs-require-context",
+    "webpack-require-context"
+  ],
+  "author": "Condor Hero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/condorheroblog/node-plugin-require-context/issues"
+  },
+  "homepage": "https://github.com/condorheroblog/node-plugin-require-context#readme",
+  "scripts": {
+    "format": "prettier --write 'src/**/*.{js,scss,css}'",
+    "lint": "eslint ./src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint -c .eslintrc"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write",
+      "eslint -c .eslintrc"
+    ]
+  }
+}
